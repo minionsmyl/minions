@@ -4,12 +4,7 @@ class PagesController < ApplicationController
   end
 	
   def about
-	
   end
-<<<<<<< HEAD
-  def all
-  end
-=======
 	
 	def search
 		# require 'ruby-web-search'
@@ -20,5 +15,4 @@ class PagesController < ApplicationController
 		# thing = response.results
 		# @another = thing.content
 	end
->>>>>>> 2a6577766b29989c1217b93f224354b93a2c4aeb
 end
