@@ -19,7 +19,6 @@
       // Check that we got results
       document.getElementById('content').innerHTML = '';
       if (newsSearch.results && newsSearch.results.length > 0) {
-	  debugger;
         for (var i = 0; i < newsSearch.results.length; i++) {
     
           // Create HTML elements for search results
