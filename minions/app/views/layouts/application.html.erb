@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Minions</title>
+  <title>Minions TODO: Brand this</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0" type="text/javascript"></script>
+    <script type="text/javascript">
+    // This code generates a "Raw Searcher" to handle search queries. The Raw 
+    // Searcher requires you to handle and draw the search results manually.
+    google.load('search', '1');
+    
+    var newsSearch;
+    
+    function searchComplete() {
+    
+      // Check that we got results
+      document.getElementById('content').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 0; i < newsSearch.results.length; i++) {
+    
+          // Create HTML elements for search results
+          var p = document.createElement('p');
+          var a = document.createElement('a');
+          a.href = newsSearch.results[i].url;
+          a.innerHTML = newsSearch.results[i].title;
+    
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          document.body.appendChild(p);
+        }
+      }
+    }
+    
+    function onLoad() {
+    
+      // Create a News Search instance.
+      newsSearch = new google.search.NewsSearch();
+      
+      // Set searchComplete as the callback function when a search is 
+      // complete.  The newsSearch object will have results in it.
+      newsSearch.setSearchCompleteCallback(this, searchComplete, null);
+    
+      // Specify search quer(ies)
+      newsSearch.execute('Barack Obama');
+    
+      // Include the required Google branding
+      google.search.Search.getBranding('branding');
+    }
+    
+    // Set a callback to call your code when the page loads
+    google.setOnLoadCallback(onLoad);
+    
+    </script>
 </head>
 <body>
 	<%= render 'layouts/header' %>
@@ -15,5 +63,7 @@
 
 <%= yield %>
 
+	<div id="branding"  style="float: left;"></div><br />
+    <div id="content"></div>
 </body>
 </html>
