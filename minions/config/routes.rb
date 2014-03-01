@@ -1,4 +1,6 @@
 Minions::Application.routes.draw do
+  resources :searches
+
  devise_for :users
  root "pages#home"
  get "about" => "pages#about"
