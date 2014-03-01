@@ -1,16 +1,9 @@
+<div class="jumbotron center">
 <h1><center> Trending</center> </h1>
 <!--
 You are free to copy and use this sample in accordance with the terms of the
 Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
 -->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>
-      Google Visualization API Sample
-    </title>
     <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load('visualization', '1', {packages: ['corechart']});
@@ -28,19 +21,13 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
         ]);
       
         // Create and draw the visualization.
-        new google.visualization.PieChart(document.getElementById('visualization')).
+        new google.visualization.PieChart(document.getElementById('visualization1')).
             draw(data, {title:"What topics are trending?"});
       }
       
 
       google.setOnLoadCallback(drawVisualization);
     </script>
-  </head>
-  <body style="font-family: Arial;border: 0 none;">
-  	<center>
-    <div id="visualization" style="width: 600px; height: 400px;"></div>
-</center>
-  </body>
-</html>
-
+    <center><div id="visualization1" style="width: 600px; height: 400px;"></div></center>
+</div>
 ​
