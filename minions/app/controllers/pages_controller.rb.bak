@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 	
 	def search
 		require 'ruby-web-search'
-		@term = params[:term]
+		@term = params[:term]		
 		
 		response = RubyWebSearch::Google.search(:query => "Natalie Portman")
 		
