@@ -6,6 +6,7 @@ Minions::Application.routes.draw do
  get "about" => "pages#about"
  get "all" => "pages#all"
  get "trending" => "pages#trending"
+ get "mylan" => "pages#mylan"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -7,4 +7,6 @@ class PagesController < ApplicationController
   end
   def trending
   end
+  def mylan
+  end
 end
