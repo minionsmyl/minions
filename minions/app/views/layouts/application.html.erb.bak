@@ -6,6 +6,8 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+=======
   <script src="//www.google.com/jsapi?key=AIzaSyA5m1Nc8ws2BbmPRwKu5gFradvD_hgq6G0" type="text/javascript"></script>
     <script type="text/javascript">
     // This code generates a "Raw Searcher" to handle search queries. The Raw 
@@ -19,7 +21,6 @@
       // Check that we got results
       document.getElementById('content').innerHTML = '';
       if (newsSearch.results && newsSearch.results.length > 0) {
-	  debugger;
         for (var i = 0; i < newsSearch.results.length; i++) {
     
           // Create HTML elements for search results
@@ -45,7 +46,7 @@
       newsSearch.setSearchCompleteCallback(this, searchComplete, null);
     
       // Specify search quer(ies)
-      newsSearch.execute('Barack Obama');
+      newsSearch.execute('Mylan');
     
       // Include the required Google branding
       google.search.Search.getBranding('branding');
@@ -55,6 +56,7 @@
     google.setOnLoadCallback(onLoad);
     
     </script>
+>>>>>>> 09f453186212e966ab0f210ada5713167c0e1f9d
 </head>
 <body>
 	<%= render 'layouts/header' %>
@@ -64,7 +66,5 @@
 
 <%= yield %>
 
-	<div id="branding"  style="float: left;"></div><br />
-    <div id="content"></div>
 </body>
 </html>
