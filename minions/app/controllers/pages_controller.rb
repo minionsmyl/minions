@@ -5,4 +5,6 @@ class PagesController < ApplicationController
   end
   def all
   end
+  def trending
+  end
 end
