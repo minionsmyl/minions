@@ -2,11 +2,6 @@ Minions::Application.routes.draw do
  devise_for :users
  root "pages#home"
  get "about" => "pages#about"
-<<<<<<< HEAD
- get "all" => "pages#all"
-=======
- get "search" => "pages#search"
->>>>>>> 2a6577766b29989c1217b93f224354b93a2c4aeb
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

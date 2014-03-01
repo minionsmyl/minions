@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ComprezZ</title>
+  <title>Minions TODO: Brand this</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -19,6 +19,7 @@
       // Check that we got results
       document.getElementById('content').innerHTML = '';
       if (newsSearch.results && newsSearch.results.length > 0) {
+	  debugger;
         for (var i = 0; i < newsSearch.results.length; i++) {
     
           // Create HTML elements for search results
